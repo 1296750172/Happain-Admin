@@ -1,0 +1,57 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: youyou
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+  thymeleaf:
+    cache: false
+
+# mybatisplus 配置
+mybatis-plus:
+#  是否复用sql
+  executorType: simple
+
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      # 自增
+      id-type: auto
+      # 逻辑删除填充字段 1
+      logicDeleteValue: 1
+#      逻辑未删除
+      logicNotDeleteValue: 0
+  configuration:
+    auto-mapping-behavior: full
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+# 反爬虫
+anti:
+  reptile:
+    manager:
+      enabled: true #开启反爬虫
+#      开启ip反扒
+      ip-rule:
+        enabled: true
+#        5秒内最大请求数
+        request-max-size: 15
+        expiration-time: 5000
+#        ip白名单
+#        ignore-ip:
+      ua-rule:
+        enabled: true
+
+
+
+
+
+
+
