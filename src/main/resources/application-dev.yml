@@ -4,9 +4,9 @@ spring:
     password: 123456
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://182.254.147.195:3306/happain-youyou?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useAffectedRows=true
+    url: jdbc:mysql://127.0.0.1:3306/happain-admin?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useAffectedRows=true
     username: root
-    password:  '!qQ12967501720.0'
+    password:  123456
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
       max-active: 20
@@ -60,7 +60,7 @@ spring:
 
   redis:
     host: 127.0.0.1 # Redis服务器地址
-    database: 0 # Redis数据库索引（默认为0）
+    database: 1 # Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
     password: 123456
     timeout: 10000ms # 连接超时时间（毫秒）
@@ -73,12 +73,16 @@ logging:
     console: utf-8
     file: utf-8
   level:
+    # 默认的是info
     root: info
+    # 自定义设置
     cn:
       happain:
-        youyou: warn
+        admin:
+          modules:
+            wechatModule: info
   file:
-    path: D:\my_project\happain-youyou\log
+    path: D:\my_project\happain-admin\log
 
 
 

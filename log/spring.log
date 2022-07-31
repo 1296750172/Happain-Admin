@@ -1,0 +1,161 @@
+2022-08-01 00:59:09.534  INFO 3512 --- [restartedMain] cn.happain.admin.AdminApplication        : Starting AdminApplication using Java 1.8.0_271 on DESKTOP-J0ISIP7 with PID 3512 (D:\my_project\happain-admin\target\classes started by happain in D:\my_project\happain-admin)
+2022-08-01 00:59:09.539  INFO 3512 --- [restartedMain] cn.happain.admin.AdminApplication        : The following 1 profile is active: "dev"
+2022-08-01 00:59:09.592  INFO 3512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-01 00:59:09.592  INFO 3512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-01 00:59:10.553  INFO 3512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 00:59:10.554  INFO 3512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-01 00:59:10.574  INFO 3512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-08-01 00:59:10.687 ERROR 3512 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userMapper' for bean class [cn.happain.admin.modules.wechatModule.mapper.UserMapper] conflicts with existing, non-compatible bean definition of same name and class [cn.happain.admin.modules.userModule.mapper.UserMapper]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.mybatis.spring.mapper.ClassPathMapperScanner.checkCandidate(ClassPathMapperScanner.java:310) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(ClassPathMapperScanner.java:204) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scan(ClassPathBeanDefinitionScanner.java:254) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.mybatis.spring.mapper.MapperScannerConfigurer.postProcessBeanDefinitionRegistry(MapperScannerConfigurer.java:375) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:142) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.19.jar:5.3.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) [spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) [spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) [spring-boot-2.6.7.jar:2.6.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) [spring-boot-2.6.7.jar:2.6.7]
+	at cn.happain.admin.AdminApplication.main(AdminApplication.java:16) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_271]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_271]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_271]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_271]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.6.7.jar:2.6.7]
+
+2022-08-01 01:01:37.796  INFO 19024 --- [restartedMain] cn.happain.admin.AdminApplication        : Starting AdminApplication using Java 1.8.0_271 on DESKTOP-J0ISIP7 with PID 19024 (D:\my_project\happain-admin\target\classes started by happain in D:\my_project\happain-admin)
+2022-08-01 01:01:37.797  INFO 19024 --- [restartedMain] cn.happain.admin.AdminApplication        : The following 1 profile is active: "dev"
+2022-08-01 01:01:37.840  INFO 19024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-01 01:01:37.841  INFO 19024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-01 01:01:38.590  INFO 19024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 01:01:38.592  INFO 19024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-01 01:01:38.612  INFO 19024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-08-01 01:01:39.338  INFO 19024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-08-01 01:01:39.345  INFO 19024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-01 01:01:39.345  INFO 19024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-08-01 01:01:39.415  INFO 19024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-01 01:01:39.416  INFO 19024 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1575 ms
+2022-08-01 01:01:40.159  INFO 19024 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-08-01 01:01:40.229  WARN 19024 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : removeAbandoned is true, not use in production.
+2022-08-01 01:01:40.338  INFO 19024 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-08-01 01:01:41.519  INFO 19024 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-08-01 01:01:41.787  INFO 19024 --- [restartedMain] org.redisson.Version                     : Redisson 3.11.0
+2022-08-01 01:01:42.102  INFO 19024 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 10 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:01:42.102  INFO 19024 --- [nioEventLoopGroup-4-10] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:01:42.387  INFO 19024 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-01 01:01:42.392  INFO 19024 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-01 01:01:42.427  INFO 19024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-08-01 01:01:42.439  INFO 19024 --- [restartedMain] cn.happain.admin.AdminApplication        : Started AdminApplication in 5.024 seconds (JVM running for 5.824)
+2022-08-01 01:01:42.833  INFO 19024 --- [RMI TCP Connection(1)-192.168.154.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 01:01:42.833  INFO 19024 --- [RMI TCP Connection(1)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-01 01:01:42.834  INFO 19024 --- [RMI TCP Connection(1)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-01 01:04:07.300  INFO 19024 --- [http-nio-9000-exec-1] c.h.a.m.w.i.WechatCheckInterceptor       : 接收到来自微信服务器的认证消息：[0,c697b4acd47415b94659f7b9415da823e6fd5387, 1659287046, 501794727, 996179544307595174]
+2022-08-01 01:09:03.730  INFO 18860 --- [restartedMain] cn.happain.admin.AdminApplication        : Starting AdminApplication using Java 1.8.0_271 on DESKTOP-J0ISIP7 with PID 18860 (D:\my_project\happain-admin\target\classes started by happain in D:\my_project\happain-admin)
+2022-08-01 01:09:03.731  INFO 18860 --- [restartedMain] cn.happain.admin.AdminApplication        : The following 1 profile is active: "dev"
+2022-08-01 01:09:03.772  INFO 18860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-01 01:09:03.772  INFO 18860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-01 01:09:04.482  INFO 18860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 01:09:04.491  INFO 18860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-01 01:09:04.516  INFO 18860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-08-01 01:09:05.219  INFO 18860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-08-01 01:09:05.225  INFO 18860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-01 01:09:05.225  INFO 18860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-08-01 01:09:05.298  INFO 18860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-01 01:09:05.298  INFO 18860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1525 ms
+2022-08-01 01:09:06.087  INFO 18860 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-08-01 01:09:06.164  WARN 18860 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : removeAbandoned is true, not use in production.
+2022-08-01 01:09:06.283  INFO 18860 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-08-01 01:09:07.450  INFO 18860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-08-01 01:09:07.713  INFO 18860 --- [restartedMain] org.redisson.Version                     : Redisson 3.11.0
+2022-08-01 01:09:08.035  INFO 18860 --- [nioEventLoopGroup-4-12] o.r.c.pool.MasterConnectionPool          : 10 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:09:08.035  INFO 18860 --- [nioEventLoopGroup-4-15] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:09:08.324  INFO 18860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-01 01:09:08.329  INFO 18860 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-01 01:09:08.364  INFO 18860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-08-01 01:09:08.377  INFO 18860 --- [restartedMain] cn.happain.admin.AdminApplication        : Started AdminApplication in 4.969 seconds (JVM running for 5.68)
+2022-08-01 01:09:08.982  INFO 18860 --- [RMI TCP Connection(2)-192.168.154.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 01:09:08.982  INFO 18860 --- [RMI TCP Connection(2)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-01 01:09:08.983  INFO 18860 --- [RMI TCP Connection(2)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-01 01:09:50.073  INFO 23076 --- [restartedMain] cn.happain.admin.AdminApplication        : Starting AdminApplication using Java 1.8.0_271 on DESKTOP-J0ISIP7 with PID 23076 (D:\my_project\happain-admin\target\classes started by happain in D:\my_project\happain-admin)
+2022-08-01 01:09:50.074  INFO 23076 --- [restartedMain] cn.happain.admin.AdminApplication        : The following 1 profile is active: "dev"
+2022-08-01 01:09:50.113  INFO 23076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-01 01:09:50.114  INFO 23076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-01 01:09:50.799  INFO 23076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 01:09:50.801  INFO 23076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-01 01:09:50.821  INFO 23076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-08-01 01:09:51.499  INFO 23076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-08-01 01:09:51.505  INFO 23076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-01 01:09:51.505  INFO 23076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-08-01 01:09:51.646  INFO 23076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-01 01:09:51.646  INFO 23076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1532 ms
+2022-08-01 01:09:52.420  INFO 23076 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-08-01 01:09:52.493  WARN 23076 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : removeAbandoned is true, not use in production.
+2022-08-01 01:09:52.605  INFO 23076 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-08-01 01:09:53.804  INFO 23076 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-08-01 01:09:54.085  INFO 23076 --- [restartedMain] org.redisson.Version                     : Redisson 3.11.0
+2022-08-01 01:09:54.426  INFO 23076 --- [nioEventLoopGroup-4-14] o.r.c.pool.MasterConnectionPool          : 10 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:09:54.426  INFO 23076 --- [nioEventLoopGroup-4-12] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:09:54.754  INFO 23076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-01 01:09:54.759  INFO 23076 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-01 01:09:54.795  INFO 23076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-08-01 01:09:54.808  INFO 23076 --- [restartedMain] cn.happain.admin.AdminApplication        : Started AdminApplication in 5.145 seconds (JVM running for 5.934)
+2022-08-01 01:09:55.116  INFO 23076 --- [RMI TCP Connection(2)-192.168.154.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 01:09:55.117  INFO 23076 --- [RMI TCP Connection(2)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-01 01:09:55.118  INFO 23076 --- [RMI TCP Connection(2)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-01 01:10:14.180  INFO 23076 --- [http-nio-9000-exec-2] c.h.a.m.w.i.WechatCheckInterceptor       : 接收到来自微信服务器的认证消息：[0,d84eba5bdad5b8dd064c4a98ac8033e7058e0a05, 1659287412, 489438124, 1137505112486297588]
+2022-08-01 01:10:54.621  INFO 23076 --- [http-nio-9000-exec-1] c.h.a.m.w.i.WechatCheckInterceptor       : 接收到来自微信服务器的认证消息：[0,be91dd79388a78b587ce8e197e41d7f2683945aa, 1659287453, 1569102586, null]
+2022-08-01 01:10:54.803  INFO 23076 --- [WxMpMessageRouter-pool-0] c.h.a.m.wechatModule.handler.LogHandler  : 
+接收到请求消息，内容：{
+    "toUser": "gh_6582944434dd",
+    "fromUser": "o_WEi6eeBqUChERB8PHXHJhdFA1k",
+    "createTime": 1659287452,
+    "msgType": "text",
+    "content": "验证码",
+    "msgId": 23755285376853247,
+    "scanCodeInfo": {
+    },
+    "sendPicsInfo": {
+        "picList": [
+        ]
+    },
+    "sendLocationInfo": {
+    },
+    "articleUrlResult": {
+    },
+    "hardWare": {
+    }
+}
+2022-08-01 01:11:58.914  INFO 20520 --- [restartedMain] cn.happain.admin.AdminApplication        : Starting AdminApplication using Java 1.8.0_271 on DESKTOP-J0ISIP7 with PID 20520 (D:\my_project\happain-admin\target\classes started by happain in D:\my_project\happain-admin)
+2022-08-01 01:11:58.915  INFO 20520 --- [restartedMain] cn.happain.admin.AdminApplication        : The following 1 profile is active: "dev"
+2022-08-01 01:11:58.956  INFO 20520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-01 01:11:58.956  INFO 20520 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-01 01:11:59.650  INFO 20520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-01 01:11:59.652  INFO 20520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-01 01:11:59.673  INFO 20520 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-08-01 01:12:00.360  INFO 20520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2022-08-01 01:12:00.366  INFO 20520 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-01 01:12:00.366  INFO 20520 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-08-01 01:12:00.439  INFO 20520 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-01 01:12:00.439  INFO 20520 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1482 ms
+2022-08-01 01:12:01.199  INFO 20520 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-08-01 01:12:01.275  WARN 20520 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : removeAbandoned is true, not use in production.
+2022-08-01 01:12:01.391  INFO 20520 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-08-01 01:12:02.546  INFO 20520 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-08-01 01:12:02.828  INFO 20520 --- [restartedMain] org.redisson.Version                     : Redisson 3.11.0
+2022-08-01 01:12:03.152  INFO 20520 --- [nioEventLoopGroup-4-8] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:12:03.152  INFO 20520 --- [nioEventLoopGroup-4-12] o.r.c.pool.MasterConnectionPool          : 10 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-01 01:12:03.454  INFO 20520 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-01 01:12:03.458  INFO 20520 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-08-01 01:12:03.494  INFO 20520 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2022-08-01 01:12:03.507  INFO 20520 --- [restartedMain] cn.happain.admin.AdminApplication        : Started AdminApplication in 5.004 seconds (JVM running for 5.799)
+2022-08-01 01:12:03.867  INFO 20520 --- [RMI TCP Connection(1)-192.168.154.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-01 01:12:03.867  INFO 20520 --- [RMI TCP Connection(1)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-01 01:12:03.868  INFO 20520 --- [RMI TCP Connection(1)-192.168.154.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
