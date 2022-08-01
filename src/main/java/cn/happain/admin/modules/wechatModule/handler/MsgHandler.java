@@ -49,7 +49,7 @@ public class MsgHandler implements WxMpMessageHandler {
                 wxUserCheck.setOpenId(wxMessage.getFromUser());
                 wxUserCheck.setNickname(wxMessage.getFromUser());
                 Message message = eventService.checkCode(appId, wxMessage.getFromUser(), wxUserCheck);
-                if(message.isOk()) {
+                if(message.getCode() == 200) {
                     return new TextBuilder().build("验证码: "+message.getMessage(),wxMessage,weixinService);
                 }else {
                     return new TextBuilder().build("内部错误，请重新点击",wxMessage,weixinService);
@@ -66,7 +66,7 @@ public class MsgHandler implements WxMpMessageHandler {
                 wxUserCheck.setNickname(wxMessage.getFromUser());
 
                 Message message = eventService.youyou_checkCode(appId, wxMessage.getFromUser(), wxUserCheck);
-                if(message.isOk()) {
+                if(message.getCode() == 200) {
                     return new TextBuilder().build("验证码: "+message.getMessage(),wxMessage,weixinService);
                 }else {
                     return new TextBuilder().build("内部错误，请重新点击",wxMessage,weixinService);

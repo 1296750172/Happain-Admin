@@ -55,7 +55,6 @@ public class EventService {
 
     /*优优资料卡关注*/
     public Message youyou_subscribe(String openid, String appid) {
-        Message message1 = new Message();
         Date date = new Date();
         /*添加到用户表*/
         addYouyouUser(openid);
@@ -68,9 +67,7 @@ public class EventService {
             user.setUpdateTime(date);
             int open_id = wxUserMapper.update(user, new UpdateWrapper<WxUser>().eq("open_id", user.getOpenId()).eq("app_id",appid));
             if(open_id==-1) {
-                Message message = new Message();
-                message.fail("修改失败");
-                return message;
+                return Message.failure404("修改失败");
             }
         }
         /*添加用户*/
@@ -85,19 +82,17 @@ public class EventService {
             wxUser1.setUpdateTime(date);
             int insert = wxUserMapper.insert(wxUser1);
             if (insert==-1) {
-                Message message = new Message();
-                message.fail("修改失败");
-                return message;
+                return Message.failure404("添加失败");
+
             }
 
         }
-        message1.success("ok");
-        return message1;
+        return Message.success();
+
     }
 
     /*关注*/
-    public Message subscribe(WxMpUser wxUser,String appid) {
-        Message message1 = new Message();
+    public Message subscribe(WxMpUser wxUser, String appid) {
         Date date = new Date();
         /*如果不为空*/
         WxUser user = wxUserMapper.selectOne(new QueryWrapper<WxUser>().eq("open_id", wxUser.getOpenId()).eq("app_id",appid));
@@ -108,9 +103,8 @@ public class EventService {
             user.setUpdateTime(date);
             int open_id = wxUserMapper.update(user, new UpdateWrapper<WxUser>().eq("open_id", user.getOpenId()).eq("app_id",appid));
             if(open_id==-1) {
-                Message message = new Message();
-                message.fail("修改失败");
-                return message;
+                return Message.failure404("修改失败");
+
             }
         }
         /*添加用户*/
@@ -125,42 +119,35 @@ public class EventService {
             wxUser1.setUpdateTime(date);
             int insert = wxUserMapper.insert(wxUser1);
             if (insert==-1) {
-                Message message = new Message();
-                message.fail("修改失败");
-                return message;
+                return Message.failure404("添加失败");
+
             }
 
         }
-        message1.success("ok");
-        return message1;
+       return Message.success();
 
     }
 
     /*取消关注*/
-    public Message unsubscribe(String openId,String appid) {
-        Message message = new Message();
+    public Message unsubscribe(String openId, String appid) {
         WxUser user = new WxUser();
         user.setSubscribe(false);
         int open_id = wxUserMapper.update(user, new UpdateWrapper<WxUser>().eq("open_id", openId).eq("app_id",appid));
         if(open_id!=-1){
-            message.success("ok");
+            return Message.success();
         }else {
-            message.fail("更新错误");
+            return Message.failure404("更新错误");
         }
-        return message;
     }
 
     /*验证码事件*/
     public Message checkCode(String appid, String openid, WxUserCheck wxUserCheck) {
-        Message message = new Message();
         /*验证码*/
         String code = CodeUtil.getCode();
         wxUserCheck.setCode(code);
         String key = appid + "@" + code;
         redisService.set(key,JSONUtil.parseObj(wxUserCheck).toStringPretty(),WxConst.SECOND);
-        message.success("ok");
-        message.setMessage(code);
-        return message;
+        return Message.success(code);
     }
 
 

@@ -17,13 +17,14 @@ public class ExceptionController {
     @ExceptionHandler(WeChatException.class)
     public Message weChatExceptionHandler(HttpServletRequest req, WeChatException e) {
         log.error(e.getMessage());
-        return new Message(e.getCode(), e.getMessage());
+        return Message.failure404(e.getMessage());
     }
 
     /*捕获全局异常*/
     @ExceptionHandler(Exception.class)
     public Message globalExceptionHandler(HttpServletRequest req, Exception e) {
         log.error(e.getMessage());
-        return new Message("500",e.getMessage());
+        return Message.failure404(e.getMessage());
+
     }
 }

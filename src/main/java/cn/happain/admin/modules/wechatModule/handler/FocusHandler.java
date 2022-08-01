@@ -58,7 +58,7 @@ public class FocusHandler implements WxMpMessageHandler {
             } catch (WxErrorException e) {
                 if (e.getError().getErrorCode() == 48001) {
                     log.info("该公众号没有获取用户信息权限！");
-                    throw new WeChatException("600","没有微信权限");
+                    throw new WeChatException("没有微信权限");
 
                 }
             }

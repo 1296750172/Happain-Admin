@@ -11,9 +11,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class WeChatException extends RuntimeException{
 
-    /*状态码*/
-    private String code;
-
     /*错误消息*/
     private String message;
+
 }

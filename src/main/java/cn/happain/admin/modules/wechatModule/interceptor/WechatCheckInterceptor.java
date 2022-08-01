@@ -64,12 +64,9 @@ public class WechatCheckInterceptor implements HandlerInterceptor {
             response.setStatus(500);
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/json; charset=utf-8");
-            Message message = new Message();
-            message.setCode("500");
             log.info("请求参数非法，请核实!");
-            message.setMessage("请求参数非法，请核实!");
             PrintWriter out = response.getWriter();
-            out.append(JSONUtil.parseObj(message).toJSONString(2));
+            out.append(JSONUtil.parseObj(Message.failure404("请求参数非法，请核实!")).toJSONString(2));
             return false;
 
         }
@@ -78,12 +75,9 @@ public class WechatCheckInterceptor implements HandlerInterceptor {
             response.setStatus(500);
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/json; charset=utf-8");
-            Message message = new Message();
-            message.setCode("500");
-            message.setMessage("未找到对应appid配置，请核实！");
             log.info("未找到对应appid配置，请核实！");
             PrintWriter out = response.getWriter();
-            out.append(JSONUtil.parseObj(message).toJSONString(2));
+            out.append(JSONUtil.parseObj(Message.failure404("未找到对应appid配置，请核实！")).toJSONString(2));
             return false;
         }
         /*验证消息是否合法*/
@@ -91,12 +85,9 @@ public class WechatCheckInterceptor implements HandlerInterceptor {
             response.setStatus(500);
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/json; charset=utf-8");
-            Message message = new Message();
-            message.setCode("500");
             log.info("消息不合法");
-            message.setMessage("消息不合法");
             PrintWriter out = response.getWriter();
-            out.append(JSONUtil.parseObj(message).toJSONString(2));
+            out.append(JSONUtil.parseObj(Message.failure404("消息不合法")).toJSONString(2));
             return false;
         }
         request.setAttribute("echostr",echostr);
